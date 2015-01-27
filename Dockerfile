@@ -1,4 +1,4 @@
-FROM d9magai/docker-centos7systemd
+FROM centos:centos6
 MAINTAINER d9magai
 
 COPY ImageMagick-6.8.6-10.tar.gz /usr/local/src/ImageMagick-6.8.6-10.tar.gz
