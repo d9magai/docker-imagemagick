@@ -16,3 +16,5 @@ make && \
 make install && \
 ldconfig
 
+RUN rm -rf /usr/local/src/*
+
