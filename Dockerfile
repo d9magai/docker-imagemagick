@@ -16,5 +16,7 @@ make && \
 make install && \
 ldconfig
 
+ENV PATH /opt/ImageMagick/bin/:$PATH
+
 RUN rm -rf /usr/local/src/*
 
