@@ -6,15 +6,15 @@ ENV IMAGEMAGICK_ARCHIVE ImageMagick-$IMAGEMAGICK_VERSION.tar.gz
 ENV IMAGEMAGICK_PREFIX /opt/ImageMagick
 ENV IMAGEMAGICK_LD_CONF /etc/ld.so.conf.d/imagemagick.conf
 
-RUN yum update -y && \
-yum install -y \
+RUN yum update -y \
+&&  yum install -y \
     gcc \
     make \
     tar \
     libjpeg-turbo-devel \
     libpng-devel \
-    freetype-devel && \
-yum clean all
+    freetype-devel \
+&&  yum clean all
 
 RUN mkdir -p $IMAGEMAGICK_PREFIX/src \
 && cd $IMAGEMAGICK_PREFIX/src \
