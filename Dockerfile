@@ -7,7 +7,13 @@ ENV IMAGEMAGICK_PREFIX /opt/ImageMagick
 ENV IMAGEMAGICK_LD_CONF /etc/ld.so.conf.d/imagemagick.conf
 
 RUN yum update -y && \
-yum install -y gcc make tar libjpeg-turbo-devel libpng-devel freetype-devel && \
+yum install -y \
+    gcc \
+    make \
+    tar \
+    libjpeg-turbo-devel \
+    libpng-devel \
+    freetype-devel && \
 yum clean all
 
 RUN mkdir -p $IMAGEMAGICK_PREFIX/src \
